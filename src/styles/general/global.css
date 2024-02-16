@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Colors */
+/* Generals */
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.main-anim {
+  animation: main-anim 1s 1;
+}
+
+header nav {
+  animation: opacity-anim 2s 1;
+}
+
+header .header-top-links button {
+  animation: opacity-anim 3s 1;
+}
+
+.opacity-anim {
+  animation: opacity-anim 3s 1;
+}
+
+@keyframes main-anim {
+  0% {
+    transform: scale(0, 0.025);
+  }
+  50% {
+    transform: scale(1, 0.025);
+  }
+}
+@keyframes opacity-anim {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=global.css.map */
