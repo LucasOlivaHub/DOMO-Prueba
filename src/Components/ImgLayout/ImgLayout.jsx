@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
@@ -13,8 +13,12 @@ function ImgLayout({img}) {
     setTimeout(() => {
       setLoading(false);
     }, 1000)
-    
   };
+
+  
+  useEffect(() => {
+
+  }, [loading])
 
   return (
     <Container className='img-layout-container'>
@@ -22,7 +26,7 @@ function ImgLayout({img}) {
         <Col xs={6} md={4}>
           {loading && <SpinnerLoader/>}
           <Image
-            src={img ? img :`https://picsum.photos/600/300?random=${Math.floor(Math.random() * 10) + 1}`}
+            src={img && img}
             rounded
             loading="lazy"
             onLoad={handleImageLoad}
