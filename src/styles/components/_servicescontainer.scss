@@ -1,0 +1,13 @@
+.services-container {
+    animation: width 2s both;
+    .section-content:nth-child(1) {
+        background-color: $grey-1;
+    }
+    .section-content:nth-child(2) {
+        background-color: $grey-2;
+    }
+    .section-content:nth-child(1) {
+        background-color: $grey-1;
+    }
+
+}

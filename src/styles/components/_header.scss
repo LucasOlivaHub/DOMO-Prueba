@@ -1,0 +1,182 @@
+header {
+    height: auto;
+    background-color: $white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+
+    @include responsive(desktop) {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .header-top-links {
+        display: none;
+        @include responsive(desktop) {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 45px;
+            justify-content: flex-end;
+            padding: 12px 100px;
+            background-color: $blue;
+
+            a {
+                color: $white;
+            }
+        }
+        
+    }
+
+
+    .logo-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .logo-container i {
+        color: $brown;
+        padding: 8px 0;
+        font-size: 1.2rem;
+    }
+
+    .logo-container a {
+        display: flex;
+        gap: 8px;
+
+    }
+
+    .logo-container a h1 {
+        margin-bottom: 0;
+        padding: 1px 25px;
+        background-color: $brown;
+        color: $white;
+        font-size: 1.2rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-container a:hover i {
+        color: rgb(131, 112, 77);
+        transition: 200ms;
+    }  
+    
+    
+    .logo-container a:hover h1{
+        background-color: rgb(131, 112, 77);
+        transition: 200ms;
+    }
+
+    .menu-btn {
+        background-color: transparent!important;
+        border: none;
+        color: $blue;
+        font-size: 1.8rem;
+        @include responsive(desktop) {
+            display: none;
+        }
+    }
+
+  
+    nav{
+        width: 100%;
+        display: flex;
+        padding: 12px 25px;
+        .nav-pc-links-wrapper {
+            display: none;
+            @include responsive(desktop) {
+                display: flex;
+                padding: 12px 75px;
+                width: 80%;
+                div {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    a {
+                        font-size: 1.2rem;
+                        color: $black;
+                     }
+                     a:hover {
+                        color: rgb(121, 195, 255);
+                        transition: 200ms;
+                     }
+                }
+            }
+        }
+    }
+
+}
+
+.nav-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    height: 70%;
+    padding: 12px 25px;
+
+    .nav-links-mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        a {
+           font-size: 1.5rem;
+           color: $black;
+        }
+        
+        a:hover {
+            color: rgb(121, 195, 255);
+            transition: 200ms;
+         }
+    }
+}
+
+.user-options-wrapper {
+    display: flex;
+    gap: 25px;
+    
+    button {
+        background-color: #08080886;
+        border: 1px solid #e9e9e970;
+        color: $white;
+        border-radius: 4px;
+        padding: 4px 12px;
+        font-weight: 400;
+    }
+
+    button:nth-child(2) {
+        background-color: #080808d7;
+    }
+    button:hover {
+        background-color: $white;
+        color: $black;
+        transition: 200ms;
+    }
+}
+
+
+.scroll-hide-show {
+    transition: visibility 1s; /* Agrega una transición suave para que la ocultación/aparición no sea abrupta */
+}
+
+.scroll-hide-show.visible {
+    opacity: 1; /* Hace que el elemento sea visible */
+    transition: 200ms;
+}
+
+.scroll-hide-show.hidden {
+    opacity: 0; /* Oculta el elemento */
+    transition: 200ms;
+}
